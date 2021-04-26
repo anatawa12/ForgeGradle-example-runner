@@ -13,4 +13,7 @@ RUN chmod +x run.sh
 
 WORKDIR /ForgeGradle-example
 
+ARG SETUP_TASK
+ENV CONT_IMG_VER ${SETUP_TASK}
+
 CMD ["/run.sh"]
