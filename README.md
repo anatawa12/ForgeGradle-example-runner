@@ -15,4 +15,9 @@ By default, this image uses `setupDecompWorkspace` for configure workspace.
 if you want to use other setup tasks like `setupCiWorkspace`, 
 run `./run_on_docker.sh <setup-task-name>` like `./run_on_docker.sh setupCiWorkspace`
 
+## How to use local ForgeGradle instead of released one.
+
+1. add symlink to `ForgeGradle-example-runner/ForgeGradle`
+1. run `./run_on_docker.sh <setup-task-name> --local`
+
 [ForgeGradle-example]: https://github.com/anatawa12/ForgeGradle-example
