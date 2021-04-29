@@ -1,0 +1,19 @@
+System.setProperty("maven.repo.local", "/root/.m2/repository")
+println("using useLocal.gradle")
+
+allprojects {
+    buildscript {
+        repositories {
+            mavenLocal()
+        }
+    }
+    repositories {
+        mavenLocal()
+    }
+
+    tasks.all {
+        if (it instanceof org.gradle.plugins.signing.Sign) {
+            it.enabled = false
+        }
+    }
+}
